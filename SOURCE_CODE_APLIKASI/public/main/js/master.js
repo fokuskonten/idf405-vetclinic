@@ -40,26 +40,11 @@ $(document).ready(function() {
     }
 
     if (role === 'admin') {
-      $('.menuPasien').show();   $('.menuPendaftaran').show();
-      $('.menuDokter').show();   $('.menuTindakan').show();
-      $('.menuGudang').show();   $('.menuPembayaran').show();
-      $('.menuKeuangan').show(); $('.menuKunjungan').show();
-      $('.menuCabang').show();   $('.menuUser').show();
-      $('.menuPeriksa').show();  $('.menuPenggajian').show();
-      $('.menuPengeluaran').show();
+      // Semua menu tampil secara default untuk peran Admin tanpa flickering
     } else if (role === 'resepsionis') {
-      $('.menuPasien').show();   $('.menuPendaftaran').show();
-      $('.menuTindakan').show(); $('.menuPembayaran').show();
-      $('.menuKunjungan').show(); $('.menuGudang').show();
-      $('.menuPenggajian').show(); $('.menuPeriksa').show();
-      $('.menuPengeluaran').show(); $('.menuKeuangan').show();
+      $('.menuCabang, .menuUser, .menuDokter').hide();
     } else if (role === 'dokter') {
-      $('.menuDokter').show();   $('.menuPasien').show();
-      $('.menuTindakan').show(); $('.menuGudang').show();
-      $('.menuKunjungan').show(); $('.menuPeriksa').show();
-      $('.menuPendaftaran').show(); $('.menuKeuangan').show();
-      $('.menuPembayaran').show(); $('.menuPenggajian').show();
-      $('.menuPengeluaran').show();
+      $('.menuCabang, .menuUser').hide();
     }
   }
 
